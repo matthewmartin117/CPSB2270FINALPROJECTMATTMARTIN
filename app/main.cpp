@@ -4,10 +4,13 @@
 using namespace std;
 
 int main() {
-  // creates two empty pairing heaps  2-5
+  // creates two empty pairing heaps  2-5-8-20 & 1-3-4-6
   PairingHeap heap1, heap2;
     heap2.Insert(5);
     heap2.Insert(2);
+    heap2.Insert(8);
+    heap2.Insert(10);
+
  
     heap2.Insert(6);
     heap1.Insert(1);

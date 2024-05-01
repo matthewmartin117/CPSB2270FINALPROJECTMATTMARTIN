@@ -15,8 +15,6 @@ IMPLEMENTATION
 I used functions that called other functions and called other helper functions to simplify the code inside the pairing heap class. 
 
 
-
-
 PAIRNODE STRUCTURE
 Functions:
 -InitNode : creates a new pairingnode, takes in a key to store , and a pointer to the left child and nextsibling as input and assigns the data.
@@ -50,6 +48,12 @@ DeleteNode: removes links betwen root,leftchild, and all siblings of the leftchi
 
 RUNNING PROGRAM
 Follow the below steps to set up and run the program: 1. Go to build dir by cd build/ 2. Run cmake .. 3. Run make 4. Run ./run_app
+
+This program constructs a pairing heap with 2-5-8-10 and a second pairing heap with 1-3-4-6.
+It will then join the two pairing heaps, and if sucessful should pring 1, since it is the smallest value. After deleting the root node, the root node should be 2. 
+
+
+
 
 
 
