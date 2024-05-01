@@ -203,33 +203,6 @@ code/P.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_app.dir/build.make CMakeFiles/run_app.dir/code/P.cpp.s
 .PHONY : code/P.cpp.s
 
-code/Vector10.o: code/Vector10.cpp.o
-.PHONY : code/Vector10.o
-
-# target to build an object file
-code/Vector10.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/code/Vector10.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_app.dir/build.make CMakeFiles/run_app.dir/code/Vector10.cpp.o
-.PHONY : code/Vector10.cpp.o
-
-code/Vector10.i: code/Vector10.cpp.i
-.PHONY : code/Vector10.i
-
-# target to preprocess a source file
-code/Vector10.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/code/Vector10.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_app.dir/build.make CMakeFiles/run_app.dir/code/Vector10.cpp.i
-.PHONY : code/Vector10.cpp.i
-
-code/Vector10.s: code/Vector10.cpp.s
-.PHONY : code/Vector10.s
-
-# target to generate assembly for a file
-code/Vector10.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/code/Vector10.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_app.dir/build.make CMakeFiles/run_app.dir/code/Vector10.cpp.s
-.PHONY : code/Vector10.cpp.s
-
 tests/test_hw.o: tests/test_hw.cpp.o
 .PHONY : tests/test_hw.o
 
@@ -271,9 +244,6 @@ help:
 	@echo "... code/P.o"
 	@echo "... code/P.i"
 	@echo "... code/P.s"
-	@echo "... code/Vector10.o"
-	@echo "... code/Vector10.i"
-	@echo "... code/Vector10.s"
 	@echo "... tests/test_hw.o"
 	@echo "... tests/test_hw.i"
 	@echo "... tests/test_hw.s"

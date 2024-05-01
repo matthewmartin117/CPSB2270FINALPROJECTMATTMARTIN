@@ -65,64 +65,19 @@ class PairingHeap {
 // helper functions
 
 // nodeEmpty - checks if the node is null
-bool nodeEmpty(pairNode* node){
-  return (node == NULL);
-}
+bool nodeEmpty(pairNode* node);
 
 // get key / top help - returns the nodes key
-int getkey(pairNode* node){
-  return node->key;
-}
+int getkey(pairNode* node);
 // mergeNode should join two heapnodes
-pairNode* mergeNode(pairNode* A, pairNode* B){
-     // if either node is null 
-      // return the not null node
-      if (A==NULL){return B;}
-      if(B== NULL){return A;}
-
-      // to maintain min heap invariant, compare nodes 
-      // min val becomes the parent max becomes the child
-      if(A->key < B->key){
-        A->addChild(B);
-        return A;
-      }
-      else{
-        B->addChild(A);
-        return B;
-      }
-
-      return NULL; // not reached
-}
+pairNode* mergeNode(pairNode* A, pairNode* B);
 
 // InsertNode helper func - inserts new node with a key into a given node
-pairNode* insertNewNode(pairNode* node, int key){
-  return mergeNode(node,new pairNode(key,NULL,NULL));
-}
+pairNode* insertNewNode(pairNode* node, int key);
 
 // helper method to delete root node
-pairNode* twoPassMerge(pairNode* node){
-  // if the node is null or its next sibling is null return the node
-  // base case 
-  if(node==NULL || node->nextSibling == NULL){return node;}
-  else { 
-    // declare three new nodes
-    pairNode *A,*B, *newNode;
-    A = node;
-    B = node->nextSibling;
-    newNode = node->nextSibling->nextSibling;
-
-    A->nextSibling = NULL;
-    B->nextSibling = NULL;
-    
-    // recursion
-    return mergeNode(mergeNode(A,B),twoPassMerge(newNode));
-
-  }
-  return NULL; // wont reach
-}
+pairNode* twoPassMerge(pairNode* node);
 
 // delete function
-pairNode* Deletenode(pairNode* node) {
-  return twoPassMerge(node->leftChild);
-}
+pairNode* Deletenode(pairNode* node);
 #endif 

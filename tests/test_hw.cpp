@@ -28,11 +28,6 @@ protected:
 
 };
 
+// write some test functions 
 
-
-// // test func template
-// TEST_ph(test_ph, Initialization) {
-//   PairingHeap testph;
-//   //EXPECT_NEQ(NULL, testph);
-// }
 

@@ -3,8 +3,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/run_app.dir/app/main.cpp.o.d"
   "CMakeFiles/run_app.dir/code/P.cpp.o"
   "CMakeFiles/run_app.dir/code/P.cpp.o.d"
-  "CMakeFiles/run_app.dir/code/Vector10.cpp.o"
-  "CMakeFiles/run_app.dir/code/Vector10.cpp.o.d"
   "run_app"
   "run_app.pdb"
 )
