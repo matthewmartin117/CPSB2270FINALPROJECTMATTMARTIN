@@ -1,8 +1,4 @@
-# CPSB2270FINALPROJECTMATTMARTIN
-
-GOAL 
-The project goal was to create a pairing heap structure, a self-adjusting binomial heap that could be utilized in implementations of Dijkstra’s algorithm and Prim’s minimum spanning tree algorithms.
-
+# PAIRINGHEAPATTMARTIN
 
 PAIRING HEAP BACKROUND
 This is a type of heap data structure that is a simplified form of a fibonacci heap,  a fibonacci heap is a data structure for priority queue operations that utilizes a collection of heap-ordered trees, and has a better runtime complexity than the regular binary trees we have have worked on in class. The pairing heap, though very simple in its implementation, actually has a practical runtime complexity that is faster than a fibonacci heap, and is a very good choice for uses with other algorithms , such as Prim’s algorithm, which finds minimum spanning tree for a weighted undirected graph. 
@@ -10,9 +6,6 @@ This is a type of heap data structure that is a simplified form of a fibonacci h
 INVARIANTS
 -Each node has a pointer towards the left child and left child points towards the next sibling of the child. 
 - Min Heap characteristics: The root is always the smallest value in the heap, and each node is smaller than its children
-
-IMPLEMENTATION
-I used functions that called other functions and called other helper functions to simplify the code inside the pairing heap class. 
 
 
 PAIRNODE STRUCTURE
@@ -49,10 +42,14 @@ DeleteNode: removes links betwen root,leftchild, and all siblings of the leftchi
 RUNNING PROGRAM
 Follow the below steps to set up and run the program: 1. Go to build dir by cd build/ 2. Run cmake .. 3. Run make 4. Run ./run_app
 
-This program constructs a pairing heap with 2-5-8-10 and a second pairing heap with 1-3-4-6.
-It will then join the two pairing heaps, and if sucessful should pring 1, since it is the smallest value. After deleting the root node, the root node should be 2. 
-
-
+### Usage Example
+```cpp
+PairingHeap heap1, heap2;
+heap1.insert(5);
+heap1.insert(3);
+heap2.insert(8);
+heap1.join(heap2);
+std::cout << "Min element: " << heap1.top() << std::endl;  // Should print 3
 
 
 

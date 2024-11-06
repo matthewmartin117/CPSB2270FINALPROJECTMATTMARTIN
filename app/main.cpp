@@ -1,32 +1,20 @@
-#include "../code/P.h"
 #include <iostream>
-
-using namespace std;
+#include "P.h"
+#include "Dijkstra.h"
 
 int main() {
-  // creates two empty pairing heaps  2-5-8-20 & 1-3-4-6
-  PairingHeap heap1, heap2;
-    heap2.Insert(5);
-    heap2.Insert(2);
-    heap2.Insert(8);
-    heap2.Insert(10);
+    Graph graph(5);
+    graph.addEdge(0, 1, 10);
+    graph.addEdge(0, 2, 3);
+    graph.addEdge(1, 2, 1);
+    graph.addEdge(1, 3, 2);
+    graph.addEdge(2, 3, 8);
+    graph.addEdge(3, 4, 7);
 
- 
-    heap2.Insert(6);
-    heap1.Insert(1);
-    heap1.Insert(3);
-    heap1.Insert(4);
-     
-    heap1.Join(heap2);
+    std::vector<int> distances = dijkstra(graph, 0);
+    for (int i = 0; i < distances.size(); ++i) {
+        std::cout << "Distance to node " << i << ": " << distances[i] << std::endl;
+    }
 
-
-    // should print 1 
-    cout << heap1.Top() << endl;
-    heap1.Delete();
-    // should print 2
-    cout << heap1.Top() << endl;
-    // should print false
-    cout<< (heap1.Empty()?"True":"False");
-     
     return 0;
 }
